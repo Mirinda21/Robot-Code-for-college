@@ -28,3 +28,45 @@ git clone https://github.com/TWOJ_LOGIN/my_robot_interface.git
 cd ..
 colcon build --symlink-install
 source install/setup.bash
+
+```
+## Jak uruchomić
+
+### 1. Sklonuj repozytorium
+
+W terminalu:
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/Mirinda21/Robot-Code-for-college.git
+```
+
+### 2. Trzeba zbudować workspace
+
+W terminalu:
+
+```bash
+source /opt/ros/jazzy/setup.bash
+cd ~/ros2_ws
+colcon build --symlink-install
+source install/setup.bash
+```
+
+### 3. Uruchom interfejs z launch file
+
+W terminalu wpisz:
+
+```bash
+ros2 launch my_robot_interface click_control.launch.py
+```
+
+### 4. Można uruchomić ręcznie całego node-a
+
+Wtedy:
+```bash
+source /opt/ros/jazzy/setup.bash
+source ~/ros2_ws/install/setup.bash
+ros2 run my_robot_interface click_control_node
+```
+
+Po tym wszystkim pojawi się okno z obrazem kamery
